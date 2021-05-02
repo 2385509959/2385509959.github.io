@@ -54,7 +54,7 @@ tag_dir: tag/
 
 # excerpt
 excerpt_separator: "\n\n\n\n"
-
+<link rel="icon" href="/favicon.ico" >
 # paginate
 plugins: [jekyll-paginate]
 paginate: 6
