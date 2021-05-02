@@ -6,6 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
+<link rel="icon" href="/favicon.ico" >
 title: 达州天立学校初一一班
 brief-intro: A place to show my class!
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -54,7 +55,6 @@ tag_dir: tag/
 
 # excerpt
 excerpt_separator: "\n\n\n\n"
-<link rel="icon" href="/favicon.ico" >
 # paginate
 plugins: [jekyll-paginate]
 paginate: 6
