@@ -41,7 +41,7 @@ icon: heart
 **若您想使用这个 jekyll 主题，请访问：[Here](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
 ## Update Log
-* 2020/05/02 网站雏形终于建成了！
+* 2021/05/02 网站雏形终于建成了！
 
 ## 友情链接
 
