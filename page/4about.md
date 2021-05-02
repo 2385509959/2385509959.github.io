@@ -40,7 +40,7 @@ icon: heart
 
 **若您想使用这个 jekyll 主题，请访问：[Here](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
-## Update Log
+### Update Log
 
 
 ## 友情链接
