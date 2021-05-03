@@ -49,6 +49,7 @@ icon: heart
 ## 友情链接
 
 
-## Comments
+## Tips
+* 2021/05/04 07:05:10 测试证明，目前 Markdown 只能显示 JPG 格式的图片。
 
 {% include comments.html %}
