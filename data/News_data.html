@@ -1,13 +1,103 @@
+var position = 0;
+var playlist;
+var video;
+window.onload = function()
+{
+playlist = ["video/preroll", "video/areyoupopular", "video/destinationearth"];  //增加播放列表
+video = document.getElementById("video");
+video.addEventListener("ended", nextVideo, false); //增加监听事件
+video.src = playlist[position] + getFormatExtension(); //添加文件名
+video.load();
+video.play();
+};
+
+
+function nextVideo ()  //下一个视频函数
+{
+position++;
+if (position >= playlist.length)
+{
+position = 0;
+}
+video.src = playlist[position] + getFormatExtension();
+video.load();
+video.play();
+}
+
+
+function getFormatExtension()  //格式判断函数
+{
+if (video.canPlayType("video/mp4") != "")
+{
+return ".mp4";
+}
+else if (video.canPlayType("video/webm") != "")
+{
+return ".webm";
+}
+else if (video.canPlayType("video/ogg") != "")
+{
+return ".ogg";
+}
+}
+/**
+* Created by andrewlee on 13-11-5.
+*/
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>Webville TV</title>
     <meta charset="utf-8">
-    <title>菜鸟教程(runoob.com)</title>
+    <link rel="stylesheet" href="webvilletv.css">
+    <script src="webvilletv.js"></script>
 </head>
 <body>
-<embed src="http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf"
-       width="480" height="400"
-       type="application/x-shockwave-flash">
-</embed>
+
+
+<div id="tv">
+
+
+    <div id="tvConsole">
+        <div id="highlight">
+            <img src="images/highlight.png" alt="highlight for tv">
+        </div>
+
+
+        <!--
+        <div id="videoDiv">
+        <video controls
+        poster="images/prerollposter.jpg"
+        id="video"
+        src="video/preroll.mp4"
+        width="480" height="360">
+        </video>
+        </div>
+        -->
+
+
+        <div id="videoDiv">
+            <video id="video"
+                   poster="images/prerollposter.jpg"
+                   width="480" height="360"
+                   controls>
+                <!--
+            <source src="video/preroll.mp4">
+            <source src="video/preroll.ogv">
+            <source src="video/preroll.webm">
+                -->
+                <p>Sorry, your browser doesn't support the video element</p>
+            </video>
+        </div>
+    </div>
+
+
+
+
+</div> <!-- tv -->
+
+
+
+
 </body>
 </html>
