@@ -24,4 +24,4 @@ author: Asdonel
 
 <iframe src="//player.bilibili.com/player.html?aid=460289446&bvid=BV1V5411w7mV&cid=330284605&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"> </iframe>
 
-<iframe height=1000 width=2000 src='https://player.youku.com/embed/XNTE0ODE2NzE1Mg==' frameborder=0 'allowfullscreen'></iframe>
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNTE0ODE2NzE1Mg==' frameborder=0 'allowfullscreen'></iframe>
