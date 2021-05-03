@@ -22,7 +22,7 @@ author: Asdonel
 ## 新闻
 **本网页由 Markdown 编写而成** 。
 
-![Alt text](https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4142822693,4248366420&fm=26&gp=0.jpg "Markdown")
+![Alt text](https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4142822693,4248366420&fm=26&gp=0.jpg)
 
 ## 1.加拿大中国留学生遭刺鲜血淋漓，有人想帮忙被一群人拦住
 
