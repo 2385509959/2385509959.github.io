@@ -21,8 +21,4 @@ author: Asdonel
 所以取名为 “新闻测试”。
 
 ## 新闻
-<embed src="http://player.youku.com/player.php/sid/XMzI2NTc4NTMy/v.swf" 
-width="480" height="400" 
-type="application/x-shockwave-flash">
-</embed>
 
