@@ -28,7 +28,7 @@ author: Asdonel
 
 据加媒26日报道，当地时间24日，加拿大艾伯塔大学的一名中国留学生在地铁站遭到陌生男子持刀袭击，手臂被刺伤后鲜血直流。报道称，该学生遭袭后有人想施以援手，却被其他人拦住，**并称“这是他（中国留学生）的问题”。**
 
-![Here](https://pics7.baidu.com/feed/9358d109b3de9c8298d908c55c51ea0218d84310.jpeg?token=9819e80f6650342a83f380292a5cf404 "留学生的手臂" )
+![Alt text](https://pics7.baidu.com/feed/9358d109b3de9c8298d908c55c51ea0218d84310.jpeg?token=9819e80f6650342a83f380292a5cf404 "留学生的手臂" )
 
 <iframe src="//player.bilibili.com/player.html?aid=460289446&bvid=BV1V5411w7mV&cid=330284605&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false" height=498 width=510> </iframe>
 
