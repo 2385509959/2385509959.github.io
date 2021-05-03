@@ -21,4 +21,5 @@ author: Asdonel
 所以取名为 “新闻测试”。
 
 ## 新闻
+![Alt text](https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4142822693,4248366420&fm=26&gp=0.jpg "optional title")
 
