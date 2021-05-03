@@ -40,9 +40,12 @@ icon: heart
 
 **若您想使用这个 jekyll 主题，请访问：[Here](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
-## Update Log
-* 2021/05/02 网站雏形终于建成了！
-* 2021/05/03 添加背景图片（调了 N 次）。
+
+## 更新日志
+
+* 2021/05/02 xx:xx:xx 网站雏形终于建成了！
+* 2021/05/03 xx:xx:xx 添加背景图片（调了 N 次）。
+* 2021/05/03 21:16:40 发布新闻网页，增加 Markdown 的嵌入视频和插入图片功能 ~绘声绘色~ 。
 ## 友情链接
 
 
