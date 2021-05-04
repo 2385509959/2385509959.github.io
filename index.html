@@ -15,6 +15,12 @@ layout: default
         <hr>
         <ul>
             {% for post in paginator.posts %}
+	      <style>
+		body
+		{
+		background-image:url("/background.jpeg")
+		}
+		</style>
               <li>
                 <h2>
                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
