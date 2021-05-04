@@ -54,6 +54,7 @@ icon: heart
 
 ## 友情链接
 
+[机房兄弟](https://www.luogu.com.cn/user/389425)
 
 ## Tips
 * 2021/05/04 07:05:10 测试证明，目前 Markdown 只能显示 JPG 格式的图片。
