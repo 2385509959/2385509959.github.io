@@ -47,4 +47,3 @@ icon: book
 
 当然，我更愿意说 “一切都是命运石之门的选择！”
 
-<iframe src="//player.bilibili.com/player.html?aid=371217788&bvid=BV1DZ4y1M7sX&cid=208119716&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
