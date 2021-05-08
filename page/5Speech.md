@@ -3,8 +3,8 @@ layout: page
 title: 个人语文演讲
 permalink: /speech/
 icon: book
+type: page
 ---
-
 * content
 {:toc}
 
