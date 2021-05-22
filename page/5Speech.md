@@ -51,4 +51,4 @@ icon: book
 
 当然，我更愿意说 “一切都是命运石之门的选择！”
 
-<iframe height=498 width=510 src=''https://player.youku.com/embed/XNTExNDg5NDgzMg=='' frameborder=0 'allowfullscreen'></iframe>
+<iframe height=498 width=510 src="https://player.youku.com/embed/XNTExNDg5NDgzMg==" frameborder=0 'allowfullscreen'></iframe>
