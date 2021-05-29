@@ -53,7 +53,7 @@ icon: book
 
 <iframe height=498 width=510 src="https://player.youku.com/embed/XNTExNDg5NDgzMg==" frameborder="no" allowfullscreen="false"></iframe>
 
-~
+~~
 # -*-  coding:utf-8 -*-
 import socket
 from time import ctime
@@ -91,7 +91,8 @@ def tcpClient():
         # 关闭客户端套接字
         s.close()
 
-~
+~~
+
 ~
 import socket
 from time import ctime
