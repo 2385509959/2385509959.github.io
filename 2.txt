@@ -14,10 +14,10 @@ phone_numbers_str = "匪警[110],火警[119],急救中心[120],道路交通事�
 weather_str = "北京,2019年1月12日,多云,8°C,-4°C,南风3级~上海,2019年1月12日,小雨,9°C,6°C,北风2级~广州,2019年1月12日,阵雨转多云,22°C,15°C,持续无风向微风"
 l2=tk.Label(window,text='1-双色球随机选号2-号码百事通3-明日天气预报0-结束程序"请输入功能编号:"',bg='pink',font=('宋体',13),width=30,height=2)
 l2.pack()
-l3=tk.Label(window,text='  ',bg='pink',font=('宋体',13),width=30,height=2)
+l3=tk.Label(window,text=s,bg='pink',font=('宋体',13),width=30,height=2)
 l3.pack()
 def generate_unionlotto():
-    n = input("您要生成几注双色球号码:")
+    s = "您要生成几注双色球号码:"
     for i in range(0, int(n)):
         for j in range(0, 6):
             r = random.randint(1,33)
@@ -26,11 +26,11 @@ def generate_unionlotto():
 
 def find_phone():
     phone_list = phone_numbers_str.split(",")
-    n = input("请输入您要查询的机构或者电话号码:")
+    s = "请输入您要查询的机构或者电话号码:"
 
     for i in phone_list:
         if i.find(n) != -1:
-            print(i)
+            s=i
 
 def get_weather():
     weather_list = weather_str.split("~")
@@ -47,15 +47,15 @@ def get_weather():
         print("{date} {name} {weather} {max}/{min} {wind}".format_map(all_weather[n]))
 
     else:
-        print("未找到{0}的天气数据".format(n))
+        ("未找到{0}的天气数据".format(n))
 
 while True:
-
-
+    op=b.get()
+    op=int(op)
     if op == '1':
         generate_unionlotto()
     elif op == '2':
-    
+
         find_phone()
     elif op == '3':
         get_weather()
