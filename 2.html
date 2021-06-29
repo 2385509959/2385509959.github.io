@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>video播放</title>
+    <style>
+#video {
+	border:1px solid black;
+	position:absolute;
+}
+canvas {
+	border:1px solid black;
+	position:absolute;
+}
+</style>
+</head>
+
+<body>
+<video id="video" width="800" height="500"></video>
+<canvas id="buffer" width="800" height="500"></canvas>
+<canvas id="realsee" width="800" height="500"></canvas>
+<br>
+<input type="button" id="bwcolor" value="黑白" style="margin-top:500px">
+<input type="button" id="invert" value="反色">
+<input type="button" id="normal" value="普通">
+<input type="button" id="play" value="播放">
+<input type="button" id="pause" value="暂停">
+<input type="button" id="next" value="切换">
+<label for="loop">循环</label><input type="checkbox" id="loop" value="循环">
+</body>
+<script>
+var video = null;	//视频对象全局变量
+var effect = null;	//特效方法全局变量
+var t = null;
+window.onload = function(){
+	video = document.getElementById("video");
+	video.src = "https://v.youku.com/v_show/id_XNTE0Nzc3NzMxNg==.html?spm=a2hzp.8253869.0.0";
+	video.load();
+
+	var play = document.getElementById("play");
+	play.onclick = playVideo;
+
+	var pause = document.getElementById("pause");
+	pause.onclick = pauseVideo;
+
+	var next = document.getElementById("next");
+	next.onclick = nextVideo;
+
+	var loop = document.getElementById("loop");
+	loop.onclick = loopVideo;
+
+	var bwcolor = document.getElementById("bwcolor");
+	bwcolor.onclick = bwVideo;
+
+	var normal = document.getElementById("normal");
+	normal.onclick = normalVideo;
+
+	var invert = document.getElementById("invert");
+	invert.onclick = invertVideo;
+};
+
+function bwVideo() {
+	//暂停当前特效，不过有点不好的是我在这里去掉了t在后面又马上赋值了t
+	//也就是说这个if好像没什么用，反正总是要有t赋值的
+	//好在这点不影响什么
+	if(t != null) {
+		clearTimeout(t);
+	}
+	var buffer = document.getElementById("buffer");
+	var realSee = document.getElementById("realsee");
+	var bufferContext = buffer.getContext("2d");
+	var realSeeContext = realSee.getContext("2d");
+	//先在buffer画上当前帧的图像
+	bufferContext.drawImage(video, 0, 0, video.width, video.height);
+	//frame用来存当前图像的所有像素信息，这些信息以r/g/b/透明度为一组，注意：需要用.data
+	//取出这些数据
+	var frame = bufferContext.getImageData(0, 0, video.width, video.height);
+	//虽然调整的画布的长宽，但是在做特效的时候，如果视频本身与video的长宽不是同样的比例的话
+	//在获取视频帧画在图像上时，因为是从画布上的第一个像素点开始画的画的
+	//当video的视频有黑边的时候，原本本来在画布上填充黑白的地方现在弄成了真实的像素
+	//从而造成视频比例的变化，如果是video和视频的宽高比是一致的话就不会出现这样的问题
+	//获取当前有多少组像素，等会要每一个像素都要处理
+	var length = frame.data.length / 4;
+	for(var i = 0; i < length; i++) {
+		var r = frame.data[i*4];
+		var g = frame.data[i*4 +1];
+		var b = frame.data[i*4 + 2];
+		//执行特效方法
+		effectBWColor(frame.data, r, g, b, i);
+	}
+	//当所有像素都处理完了之后把像素放到realSee中
+	realSeeContext.putImageData(frame, 0, 0);
+	//以最快的速度运行bwVideo。。。不要在意这个会不会卡死哈~
+	t = setTimeout(bwVideo, 0);
+}
+function normalVideo() {
+	//终止当前的视频特效
+	if(t != null) {
+		clearTimeout(t);
+	}
+	var realSee = document.getElementById("realsee");
+	var realSeeContext = realSee.getContext("2d");
+	realSeeContext.drawImage(video, 0, 0, video.width, video.height);
+	t = setTimeout(normalVideo, 0);
+}
+function invertVideo() {
+	if(t != null) {
+		clearTimeout(t);
+	}
+	var buffer = document.getElementById("buffer");
+	var realSee = document.getElementById("realsee");
+	var bufferContext = buffer.getContext("2d");
+	var realSeeContext = realSee.getContext("2d");
+
+	bufferContext.drawImage(video, 0, 0, video.width, video.height);
+	var frame = bufferContext.getImageData(0, 0, video.width, video.height);
+	var length = frame.data.length;
+	for(var i = 0; i < length/4; i++) {
+		effectInvert(frame.data, frame.data[i*4], frame.data[i*4+1],
+		frame.data[i*4+2], i);
+	}
+	realSeeContext.putImageData(frame, 0, 0);
+	t = setTimeout(invertVideo, 0);
+}
+function effectInvert(data, r, g, b, i) {
+	data[i*4] = 255 - r;
+	data[i*4+1] = 255 - g;
+	data[i*4+2] = 255 - b;
+}
+function effectBWColor(data, r, g, b, i) {
+	//这里是亮度值的计算，我也不懂为什么这样算
+
+	var lightness = (3*r + 4*g + b) >>> 3;
+	if(lightness < 0) {
+		lightness = 0;
+	}
+	data[i*4] = lightness;
+	data[i*4+1] = lightness;
+	data[i*4+2] = lightness;
+}
+
+function playVideo() {
+	video.play();
+}
+function pauseVideo() {
+	video.pause();
+}
+function nextVideo() {
+	var videoName = video.src;
+	//我这里是的视频名字最后一个是判断是几号视频的，这个方法不是很好，不要学哈
+	videoName = videoName.substring(videoName.length-5, videoName.length-4)
+	videoName = videoName == "1" ? "2" : "1";
+	video.src = "demo" + videoName + ".mp4";
+	video.load();
+	video.play();
+}
+function loopVideo() {
+	//先判读当前的选中状态
+	var loop = document.getElementById("loop");
+	if(loop.checked) {
+		//选中的状态
+		video.loop = true;
+	} else {
+		//取消选中的状态
+		video.loop = false;
+	}
+}
+</script>
+</html>
