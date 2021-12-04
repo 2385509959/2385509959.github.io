@@ -1,12 +1,28 @@
 ---
 layout: page
-title: 个人语文演讲
+title: 语文课前演讲
 permalink: /speech/
 icon: book
 ---
 * content
 {:toc}
+# 句 子 分   享
 
-## TEST
+## 习惯于绝望的处境比绝望处境本身还要糟。
+##                       ----加缪『鼠疫』
 
-<iframe src="//player.bilibili.com/player.html?aid=414554384&bvid=BV1JV411m7tc&cid=234992154&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false" height=498 width=820> </iframe>
+人只有不满于现状，不断奋斗，才有可能拜托悲惨的处境，走向更好的生活。
+而一旦习惯了这种悲惨的处境，便会失去改变自我、展翅高飞的欲望，
+最终沦为命运的奴隶。
+
+## 年少时代的忧郁是对整个宇宙的骄傲。
+##                   ----芥川龙之介
+
+年少时代的忧郁是对整个宇宙的骄傲。当你为一朵花的凋零而黯然失落的时候，
+当你为春天的逝去而郁郁不乐的时候，当你为星空的黯淡而耿耿于怀的时候，
+请不要害羞，因为那些是成年人遗失并且再也找不到的宝物。
+
+
+同学们，当大家为青春而烦恼时，一定要记住，青春只有一次，逝去便不再重来，
+大家一定要学会珍惜青春，
+努力奋斗，让青春绽放出最美的光彩！！
