@@ -1,3 +1,11 @@
+---
+layout: default
+title: 欧xxの解析
+permalink: /solution/
+icon: th-list
+type: page
+---
+
 ### 思路
 
 #### PART I
