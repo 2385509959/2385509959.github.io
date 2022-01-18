@@ -1,5 +1,6 @@
 ---
 layout: default
+mathjax: true
 title: 欧xxの解析
 permalink: /solution/
 icon: th-list
