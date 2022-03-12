@@ -1,7 +1,7 @@
 ---
 layout: default
 mathjax: true
-title: 欧xxの解析
+title: 孙至豪新闻播报
 permalink: /solution/
 icon: th-list
 type: page
