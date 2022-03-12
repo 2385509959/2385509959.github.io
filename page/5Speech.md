@@ -2,7 +2,7 @@
 layout: default
 mathjax: true
 title: 孙至豪新闻播报
-permalink: /solution/
+permalink: /speech/
 icon: th-list
 type: page
 ---
