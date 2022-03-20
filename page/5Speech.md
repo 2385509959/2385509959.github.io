@@ -1,7 +1,7 @@
 ---
 layout: default
 mathjax: true
-title: 李佳宇的新闻播报
+title: 李佳宇的语文课前演讲
 permalink: /speech/
 icon: th-list
 type: page
