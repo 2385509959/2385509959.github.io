@@ -1,7 +1,7 @@
 ---
 layout: default
 mathjax: true
-title: 孙至豪新闻播报
+title: 李佳宇的新闻播报
 permalink: /speech/
 icon: th-list
 type: page
@@ -12,4 +12,4 @@ type: page
 
 ## 天花乱坠的广告
 
-<iframe src="//player.bilibili.com/player.html?aid=460289446&bvid=BV1uf4y1S7kd&cid=330284605&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false" height=800 width=750> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=460289446&bvid=BV1uf4y1S7kd&cid=330284605&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false" height=800 width=1200> </iframe>
